@@ -6,7 +6,7 @@ const { exec } = require("child_process");
 let stickersCounter = 0;
 
 const print = (fileName) => {
-    exec(`mspaint /p "C:\\Users\\aless\\Documents\\stickers-printer\\sticker-printer-server\\stickers\\${fileName}"`, (error, stdout, stderr) => {
+    exec(`mspaint /p "C:\\Users\\USERNAME\\Documents\\stickers-printer\\sticker-printer-server\\stickers\\${fileName}"`, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
             return;
@@ -48,6 +48,7 @@ const server = https.createServer(servreOptions, (req, res) => {
     }
     else{
         res.writeHead(200, headers)
+
     }
 
 })
